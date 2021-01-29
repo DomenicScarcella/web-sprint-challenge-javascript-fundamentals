@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+// Because of closure.  The nestedFunction can look outside its local scope to the the function in whcih it is nested, myFunction, for necessary information.
 
 
 
