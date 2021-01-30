@@ -53,6 +53,7 @@ const zooAnimals = [
     { animal_name: "Australian pelican", population: 5, scientific_name: "Pelecanus conspicillatus", state: "West Virginia" },
   ];
   
+
   /* 🦁🦁🦁 Request 1: .forEach() 🦁🦁🦁
   The zoos want to display both the scientific name and the animal name in front of the habitats. 
   Use animalNames to populate and return the displayNames array with only the animal name and scientific name of each animal. 
@@ -62,8 +63,8 @@ const zooAnimals = [
 
   function animalNames(array){
     let displayNames = [];
-    return array.forEach(function(thing){
-      return displayNames.push(`name: ${thing.animal_name}, scientific: ${thing.scientific_name}`);
+    array.forEach((thing) => {
+      displayNames.push(`name: ${thing.animal_name}, scientific: ${thing.scientific_name}`);
     });
   }
   
@@ -232,6 +233,9 @@ console.log(cuboidTwo.surfaceArea()); // 130
 class CubeMaker extends CuboidMakerTwo{
   constructor(attr){
     super(attr);
+    this.length = attr.side;
+    this.width = attr.side;
+    this.height = attr.side;
   }
   volume(side){
     return Math.pow(side, 3);
@@ -242,13 +246,12 @@ class CubeMaker extends CuboidMakerTwo{
 }
 
 const cube = new CubeMaker({
-  length: 4,
-  width: 4,
-  height: 4,
+  side: 3,
 })
 
-console.log(cube.volume(4));
-console.log(cube.surfaceArea(4));
+console.log(cube);
+console.log(cube.volume(3));
+console.log(cube.surfaceArea(3));
 
 
 
